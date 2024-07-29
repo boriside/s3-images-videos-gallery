@@ -1,9 +1,9 @@
 # Simple S3 Images and Videos Gallery with Folder Navigation
 
 **Only IAM User keys and bucket name needed.**
-If you love AWS like me, you probably keep your pictures on S3. This tool is a web-based image gallery that connects to an Amazon S3 bucket to display images. It allows users to navigate through folders, view images and videos (also with lef and right arrow keys) and download all files in a folder as a ZIP file.
+If you love AWS like me, you probably keep your pictures and videos on S3. You probably also know, that you cannot view them in a gallery and have to download them one by one. This tool is a web-based image gallery that connects to an Amazon S3 bucket to display them. It allows users to navigate through folders, view images and videos (also with lef and right arrow keys) and download all files in a folder as a ZIP file.
 **Note:** the way this tool is implemented is not particularly secure - it's meant to be easy and self hosted (meaning just download the repo contents it and open the index.html file).
-If you plan to host it for other users, please refer to the AWS guildelines and architectural propositions.
+If you plan to host it for other users, please refer to the AWS guildelines and architectural propositions. Tested on Chrome and Safari.
 
 ## Features
 
@@ -141,6 +141,10 @@ If you plan to host it for other users, please refer to the AWS guildelines and 
 4. **Keyboard navigation:**
 
     Use the left (`ArrowLeft`) and right (`ArrowRight`) arrow keys to navigate through images.
+   
+6. **Logging (Optional):**
+
+   The tool has really great logging - just open the developer tools of Chrome (or whatever browser you have) and check the logs in the console.
 
 
 ## License
