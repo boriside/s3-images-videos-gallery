@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 Images and Videos Gallery </title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script> <!-- Add JSZip library -->
+</head>
+<body>
+    <div id="container">
+        <div id="tree">
+            <ul id="folder-tree"></ul>
+        </div>
+        <div id="gallery">
+            <div id="image-container"></div>
+            <div id="navigation">
+                <button id="prev">Previous</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.799.0.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
