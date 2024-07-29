@@ -1,28 +1,27 @@
 # Simple S3 Images and Videos Gallery with Folder Navigation
 
-**Only IAM User keys and bucket name needed.**
-If you love AWS like me, you probably keep your pictures and videos on S3. You probably also know, that you cannot view them in a gallery and have to download them one by one. This tool is a web-based image gallery that connects to an Amazon S3 bucket to display them. It allows users to navigate through folders, view images and videos (also with lef and right arrow keys) and download all files in a folder as a ZIP file.
-**Note:** the way this tool is implemented is not particularly secure - it's meant to be easy and self hosted (meaning just download the repo contents it and open the index.html file).
-If you plan to host it for other users, please refer to the AWS guildelines and architectural propositions. Tested on Chrome and Safari.
+If you love AWS like me, you probably keep your pictures and videos on S3. You probably also know, that you cannot view them as a gallery and have to download them one by one. I struggled to find an **easy tool where only IAM User keys and bucket name are necessary, to connect and view your S3 bucket contents.** That's how the need for this tool emerged.  
+The tool is a web-based image gallery that connects to an Amazon S3 bucket to display them. It allows users to navigate through folders, view images and videos (also using left and right arrow keys) and download all files in a folder as a ZIP file. The last is particularly useful if you have videos, that are in formats, that your browser can't play.  
+**Note:** the way this tool is implemented is not particularly secure - it's meant to be easy and locally hosted (meaning you can just download the repo contents and open the index.html file and that's it). If you plan to host it for other users, please refer to the AWS guildelines and architectural propositions. Tested on Chrome and Safari.
 
 ## Features
 
 - List and navigate through folders in an S3 bucket.
 - Display images and videos from the S3 bucket.
-- Download all files in a folder as a ZIP file.
+- Download all files in a prefix as a ZIP file.
 - Navigate through images using left and right arrow keys.
 
 ## Prerequisites
 
-- Your images in an S3 Bucket
+- Your images in an S3 Bucket.
 - AWS SDK for JavaScript.
 - JSZip library for creating ZIP files.
-- Node.js and npm (Node Package Manager).
+- (Optional) Node.js and npm (Node Package Manager).
 
 ## Setup
 
 1. **Clone or download the repo:**
-
+   
 2. **Configure AWS SDK:**
 
     Open `script.js` and update the AWS configuration with your access key, secret access key, and region:
@@ -35,7 +34,7 @@ If you plan to host it for other users, please refer to the AWS guildelines and 
     });
     ```
 
-4. **Update the S3 bucket name:**
+3. **Update the S3 bucket name:**
 
     In `script.js`, update the `bucketName` variable with the name of your S3 bucket:
 
@@ -43,7 +42,7 @@ If you plan to host it for other users, please refer to the AWS guildelines and 
     const bucketName = 'your-s3-bucket-name';
     ```
 
-5. **Set up CORS for your S3 bucket:**
+4. **Set up CORS for your S3 bucket:**
 
     To allow your web application to access the S3 bucket, you need to configure CORS (Cross-Origin Resource Sharing) for the bucket. Go to the S3 console, select your bucket, and add the following CORS configuration - this is an example for localhost, **your case might be different**:
 
@@ -73,7 +72,7 @@ If you plan to host it for other users, please refer to the AWS guildelines and 
     ]
     ```
 
-6. **Create an AWS user with inline policies:**
+5. **Create an AWS user with inline policies:**
 
     - Go to the IAM console and create a new user.
     - Attach the following inline policy to the user to allow access to the S3 bucket:
@@ -99,9 +98,9 @@ If you plan to host it for other users, please refer to the AWS guildelines and 
 
     - Replace `your-s3-bucket-name` with the name of your S3 bucket.
 
-7. **Run a local server:**
+6. **(Optional) Run a local server:**
 
-    The tool doesn't require a server by itself, but I needed to do this, cause CORS wouldn't let me access the files in the S3 bucket. You can use `http-server` for this purpose.
+    The tool doesn't require a server by itself, but I needed to do this, cause CORS wouldn't let me access the files in the S3 bucket. By doing this step you can have your tool running on localhost:8080 and just whitelist this in your bucket's CORS configuration. You can use `http-server` for this purpose.
 
     - Install `http-server` globally using npm:
 
