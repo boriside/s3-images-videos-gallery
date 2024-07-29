@@ -2,6 +2,8 @@
 
 **Only IAM User keys and bucket name needed.**
 If you love AWS like me, you probably keep your pictures on S3. This tool is a web-based image gallery that connects to an Amazon S3 bucket to display images. It allows users to navigate through folders, view images and videos (also with lef and right arrow keys) and download all files in a folder as a ZIP file.
+**Note:** the way this tool is implemented is not particularly secure - it's meant to be easy and self hosted (meaning just download the repo contents it and open the index.html file).
+If you plan to host it for other users, please refer to the AWS guildelines and architectural propositions.
 
 ## Features
 
