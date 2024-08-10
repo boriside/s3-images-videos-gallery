@@ -3,6 +3,17 @@
 If you love AWS like me, you probably keep your pictures and videos on S3. You probably also know, that you cannot view them as a gallery and have to download them one by one. I struggled to find an **easy tool where only IAM User keys and bucket name are necessary, to connect and view your S3 bucket contents.** That's how the need for this tool emerged.  
 The tool is a web-based image gallery that connects to an Amazon S3 bucket to display them. It allows users to navigate through folders, view images and videos (also using left and right arrow keys) and download all files in a folder as a ZIP file. The last is particularly useful if you have videos, that are in formats, that your browser can't play.  
 **Note:** the way this tool is implemented is not particularly secure - it's meant to be easy and locally hosted (meaning you can just download the repo contents and open the index.html file and that's it). If you plan to host it for other users, please refer to the AWS guildelines and architectural propositions. Tested on Chrome and Safari.
+# My Project
+
+This is a description of my project.
+
+## Images
+
+Here is how it looks for me:
+
+![Example 1](https://raw.githubusercontent.com/boriside/s3-images-videos-gallery/main/images/gallery1.png)
+![Example 2](https://raw.githubusercontent.com/boriside/s3-images-videos-gallery/main/images/gallery2.png)
+
 
 ## Features
 
